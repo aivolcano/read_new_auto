@@ -20,7 +20,7 @@ TextRank中，windows=3，意味着前后3个句子作为顶点，两两使用�
 
 NLP的长文本解决方案有（以BERT为例，BERT最长只能输入512个字）
 * 人工规则提取核心内容：前128个字 和 后382个字，适用于新闻、文章
-* 截断：前510个字，从511个字开始的内容删除；或者后511个字，从后511个字开始的内容删除
+* 截断：前510个字，从511个字开始的内容删除；或者后510个字，从后511个字开始的内容删除
 * 召回算法：从长文本中召回top-k个关键句。
 
 ```python 
@@ -39,4 +39,5 @@ text4bert = readingNews1.title + readingNews1.import_sentence[0][2:] + readingNe
 ```
 
 环境要求
+
 pip install textrank4zh
